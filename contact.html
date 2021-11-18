@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Contact</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+       <script>
+	   function validation()
+	   {
+			var name=document.getElementById("name").value;
+			var email=document.getElementById("email").value;
+			var subject=document.getElementById("subject").value;
+			var message=document.getElementById("message").value;
+			
+			if(name=="")
+			{
+				alert("Please Enter Name");
+			}
+			else if(email=="")
+			{
+				alert("Please Enter Email Address");
+			}
+			else if(subject=="")
+			{
+				alert("Please Enter subject");
+			}
+			else if(message=="")
+			{
+				alert("Please Write Message");
+			}
+			else 
+			{
+				alert("Message Send Successfully");
+			}
+	   }
+	   </script>
+    
+        <header class="header_area">
+            <div class="main_menu">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html" style="color:midnightblue;" onMouseOver="this.style.color='blue'"onMouseOut="this.style.color='midnightblue'">Home</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="about.html" style="color:midnightblue;" onMouseOver="this.style.color='blue'"onMouseOut="this.style.color='midnightblue'">About</a></li> 
+                                <li class="nav-item active"><a class="nav-link" style="color:white;" onMouseOver="this.style.color='blue'" onMouseOut="this.style.color='white'" >Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="contact_area section_gap">
+            <div class="contactForm">
+                 <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+            </div>
+        </section>
+    </body>
+</html>
